@@ -1,0 +1,266 @@
+/*
+Theme Name: Lepe Tendwell Properties Theme
+Author: David Farfan & Alex Roberts
+Description: Custom theme built for Lepe Tendwell Properties
+Version: 1.0.0
+*/
+
+/*
+Wordpress Template files: https://developer.wordpress.org/themes/basics/template-files/
+Image for template theme: https://codex.wordpress.org/Theme_Development#Screenshot
+*/
+
+.navbar {
+    padding: 1.5rem 1rem;
+    background-color: #212121;
+}
+
+ul.navbar-nav li {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, 
+                    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 1.5rem;
+font-weight: 100;
+margin: 0 0px 0 10px;
+
+}
+
+.svg-inline--fa {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.fa-phone {
+    transform: scaleX(-1);
+}
+
+
+ul.navbar-nav{
+    font-size: 1rem;
+}
+
+.lepe-logo-container{
+    margin-top: 0rem;
+    position: relative;
+    box-shadow: 0px 5px 5px 0px rgba(2, 2, 2, 0.425);
+
+}
+
+.lepe-logo {
+    padding: 2rem 0 2rem 0;
+    width: 10rem;
+
+}
+
+.lepe-logo-footer {
+    width: 10rem;
+    padding: 2rem 0 2rem 0;
+}
+
+
+.footer-container{
+    /*background-color: #212121;*/
+    /*background-color: #627192;
+    background: linear-gradient(#000,#627192);*/
+    background-color: #212121;
+    background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+
+    text-align:center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+}
+
+.address-row {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, 
+                    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+font-weight: 100;
+color:rgba(255,255,255,.5);
+
+}
+
+.footer-container, a:any-link{
+    color:rgba(255,255,255,.5);
+}
+
+/*For the FOLLOW US Text */
+.my-display{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, 
+                    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding: 0 0 3rem 0;
+    color: #212121;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-brand{
+    width: 9rem;
+    margin-right: 0px;
+}
+
+#brand-logo img {
+    max-width: 9rem;
+}
+
+
+.hero-background{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    margin-top: -10.125rem;
+    background-image: url('./images/aerial_shot.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#img-div {
+padding-top: 1rem;
+}
+
+.social{
+    font-size: 3.5rem;
+    margin: 0 .7rem 0 .7rem;
+}
+
+.fa-facebook-square {
+    color: #3b5998;
+}
+
+.fa-youtube {
+    color: #ff0000;
+}
+
+svg.fa-instagram * {
+    fill: url(#rg);
+}
+
+.fa-twitter {
+    color: #55acee;
+}
+
+.social-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.content-container {
+    padding-top: 2.125rem;
+}
+
+body{
+    padding-top: 8rem;
+}
+
+.breadcrumb-nav {
+    /* "top" is required to prevent navbar from covering breadcrumb links */
+    top: 8rem;
+}
+
+
+/**************** 
+    CARD STYLE
+*****************/
+.card {
+    border: none;
+    box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
+    margin-bottom: 4rem;
+}
+
+.card-h1 {
+    text-shadow: 9px 8px 14px #000000;
+    font-size: 7rem;
+}
+
+.card a {
+    all: unset;
+    cursor: pointer;
+
+}
+
+.card-img-overlay {
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img {
+    opacity: .6;    
+}
+
+
+
+@media (max-width: 991px) {
+
+    .card-h1 {
+        font-size: 3rem;
+    }
+    
+} /*END OF CARD STYLE */
+
+/* 
+#
+#
+    Keep this at the bottom
+#
+#
+*/
+
+@media (min-width: 992px) {
+    .lepe-logo{
+        display: none;
+    }
+
+    .social {
+        font-size: 4rem;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .navbar-brand{
+        display: none;
+    }
+
+    .content-container {
+        padding-top: 0px;
+    }
+
+    .hero-background {
+        margin-top: 0px;
+    }
+
+    body{
+        padding-top:0px;
+    }
+
+    .my-display{
+
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 0 0 3rem 0;
+    color: #212121;
+    }
+
+    .lepe-logo-container{
+        margin-top: 5rem;
+    }
+
+    .breadcrumb-nav {
+        top: 5rem;
+    }
+
+    #wpadminbar {
+        position: fixed;
+    }
+
+    
+}
