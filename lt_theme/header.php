@@ -9,7 +9,8 @@
     <meta name="author" content="David Farfan and Alex Roberts">
     <meta name="theme-color" content="#212121">
 
-	<title><?php echo get_bloginfo( 'name' ); ?></title>
+    <title><?php echo get_bloginfo( 'name' ); ?></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <?php wp_head();?>
 
 </head>
@@ -52,10 +53,11 @@
     </nav>
    
     <div class="container-fluid text-center lepe-logo-container">
-        <img class="lepe-logo" src="<?php bloginfo('template_url'); ?>/images/lepe-tendwell-logo.png">
+        <a href="<?php echo get_bloginfo( 'wpurl' ); ?>"> <img class="lepe-logo" src="<?php bloginfo('template_url'); ?>/images/lepe-tendwell-logo.png"></a>
     </div>
 <?php 
-    if (!is_front_page() && get_post_ancestors(get_the_ID())) {
+    global $post;
+    if (!is_front_page() && $post->post_parent) {
         $page_ancestors = get_post_ancestors(get_the_ID());
         echo '
         <nav aria-label="breadcrumb" class="sticky-top breadcrumb-nav">
@@ -65,7 +67,6 @@
                     foreach($page_ancestors as $page_ancestor){
                         $page_ancestor_data = get_post($page_ancestor);
                         $parent_url = esc_url(get_permalink($page_ancestor));
-                        //print_r($page_ancestor_data);
                         echo ('<li class="breadcrumb-item"><a href="' . $parent_url . '">' .(apply_filters( "the_title", get_the_title( end ( $page_ancestors ) ) )) .'</a></li>');  
                     }
                     
